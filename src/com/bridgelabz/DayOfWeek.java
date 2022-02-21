@@ -29,7 +29,7 @@ public class DayOfWeek {
 
     /**
      * @param userInput
-     * @return
+     * @return day of the week for given input
      */
     public static String printDayOfWeek(int[] userInput){
         int date = userInput[0];

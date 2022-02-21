@@ -38,7 +38,7 @@ public class VendingMachine {
     /**
      * @param amount
      * @param notesMap
-     * @return Map
+     * @return Map<Integer,Integer>
      */
     public static Map<Integer, Integer> getDenomination(int amount, Map<Integer, Integer> notesMap) {
         int[] notes = {1000,500,100,50,10,2,1};
