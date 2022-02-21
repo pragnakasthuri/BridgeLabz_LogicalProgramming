@@ -8,6 +8,9 @@ public class BinaryConversion {
         printBinaryRepresentation(userInput);
     }
 
+    /**
+     * @param userInput
+     */
     private static void printBinaryRepresentation(int userInput) {
         StringBuffer binary = new StringBuffer("");
         while (userInput > 0) {
@@ -17,6 +20,9 @@ public class BinaryConversion {
         System.out.println("Binary representation of: "+userInput+" is: "+binary.reverse());
     }
 
+    /**
+     * @return input given by the user as int
+     */
     private static int readUserInput() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter your input");

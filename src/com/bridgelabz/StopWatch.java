@@ -23,7 +23,7 @@ public class StopWatch {
 
     /**
      * @param scanner
-     * @return
+     * @return Current time in milliseconds
      */
     private static long readStartTime(Scanner scanner) {
         System.out.println("Press 'S' to start");

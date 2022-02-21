@@ -9,6 +9,9 @@ public class BinaryConversion2 {
         swapNibblesAndFindNewNumber(binary);
     }
 
+    /**
+     * @param binary
+     */
     private static void swapNibblesAndFindNewNumber(String binary) {
         String nibble1 = binary.substring(0, 4);
         String nibble2 = binary.substring(4);
@@ -16,28 +19,30 @@ public class BinaryConversion2 {
         System.out.println("New number is: "+binaryToDecimal(Integer.parseInt(newBinary)));
     }
 
+    /**
+     * @param n
+     * @return Decimal value
+     */
     static int binaryToDecimal(int n)
     {
         int num = n;
-        int dec_value = 0;
-
-        // Initializing base
-        // value to 1, i.e 2^0
+        int decimalValue = 0;
         int base = 1;
-
         int temp = num;
+
         while (temp > 0) {
-            int last_digit = temp % 10;
+            int lastDigit = temp % 10;
             temp = temp / 10;
-
-            dec_value += last_digit * base;
-
+            decimalValue += lastDigit * base;
             base = base * 2;
         }
-
-        return dec_value;
+        return decimalValue;
     }
 
+    /**
+     * @param userInput
+     * @return This method will return the binary form of given number
+     */
     private static String toBinary(int userInput) {
         StringBuffer binary = new StringBuffer("");
         while (userInput > 0) {
@@ -49,13 +54,15 @@ public class BinaryConversion2 {
             binary.append("0");
         }
 
-        System.out.println("Binary representation of: "+userInput+" is: "+binary.reverse());
         return binary.reverse().toString();
     }
 
+    /**
+     * @return user input of type int
+     */
     private static int readUserInput() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter your input");
+        System.out.println("Enter your input :");
         int userInput = scanner.nextInt();
         scanner.close();
         return userInput;
